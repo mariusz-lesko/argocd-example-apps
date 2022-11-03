@@ -18,7 +18,4 @@ spec:
         name: guestbook-ui
         ports:
         - containerPort: 8080
-      volumes:
-      - name: jenkins-home
-          persistentVolumeClaim:
-            claimName: jenkins-data
+        
