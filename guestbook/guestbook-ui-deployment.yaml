@@ -18,9 +18,6 @@ spec:
         name: guestbook-ui
         ports:
         - containerPort: 8080
-        volumeMounts:
-        - mountPath: "/var/jenkins_home"
-            name: jenkins-home
       volumes:
       - name: jenkins-home
           persistentVolumeClaim:
