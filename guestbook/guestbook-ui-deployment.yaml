@@ -14,7 +14,7 @@ spec:
         app: guestbook-ui
     spec:
       volumes:
-      - name: jenkins-home
+      - name: pv0002
         persistentVolumeClaim:
           claimName: jenkins-home
       containers:
@@ -24,5 +24,5 @@ spec:
         - containerPort: 8080
         volumeMounts:
         - mountPath: "/var/jenkins_home"
-          name: jenkins-home
+          name: pv0002
           
