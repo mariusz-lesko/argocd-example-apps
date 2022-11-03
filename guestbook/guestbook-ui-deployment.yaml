@@ -24,4 +24,4 @@ spec:
       volumes:
         - name: jenkins-home
           persistentVolumeClaim:
-            claimName: jenkins-home
+            claimName: jenkins-data
