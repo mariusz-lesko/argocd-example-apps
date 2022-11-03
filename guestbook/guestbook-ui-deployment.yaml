@@ -13,9 +13,16 @@ spec:
       labels:
         app: guestbook-ui
     spec:
+      volumes:
+      - name: pv-storage
+          persistentVolumeClaim:
+            claimName: pvc-jenkins-home
       containers:
       - image: jenkins/jenkins:latest
         name: guestbook-ui
         ports:
         - containerPort: 8080
+        volumeMounts:
+        - mountPath: "/usr/share/nginx/html"
+            name: pvc-jenkins-home
         
